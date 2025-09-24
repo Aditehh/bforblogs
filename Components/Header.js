@@ -6,7 +6,9 @@ const Header = () => {
         <div>
             <div className="py-5 px-5 md:px-12 lg:px-28">
                 <div className='flex justify-between items-center'>
-                    bforBLOG
+                    <p className='text-2xl font-bold'>
+                        bforBLOG
+                    </p>
                     <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 rounded-2xl sm:px-6 border border-solid border-black shadow-[-7px_7px_0px_#000000]'>
                         Get started
                     </button>
