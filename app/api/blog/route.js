@@ -12,12 +12,23 @@ const loadDB = async () => {
 loadDB();
 
 
+
+//API end point to get all blogs
 export async function GET(request) {
-    // return Response.json({ message: 'Hello World' })
+    // return Response.json({  message: 'Hello World' })
     // console.log("Blog GET hit")
-    return NextResponse.json({ msg: "API working" })
+    const blogs = await blogModel.find({})
+
+
+
+
+    return NextResponse.json({ blogs })
 }
 
+
+
+
+// API end ponit for Uploading blogs
 export async function POST(request) {
     // return Response.json({ message:  'Hello World' })
     // console.log("Blog GET hit")
@@ -57,7 +68,7 @@ export async function POST(request) {
     return NextResponse.json({ success: true, error: false, msg: "blog added" })
 
 
-    
+
     // return NextResponse.json({ msg: "API working" })
 }
 
