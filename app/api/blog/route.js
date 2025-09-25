@@ -57,10 +57,7 @@ export async function POST(request) {
     return NextResponse.json({ success: true, error: false, msg: "blog added" })
 
 
-
-
-
-
+    
     // return NextResponse.json({ msg: "API working" })
 }
 
