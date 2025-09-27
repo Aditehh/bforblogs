@@ -1,12 +1,24 @@
 import { blog_data } from '@/Assets/Nextjs-blog-assets/Assets/assets'
-import React from 'react'
+import React, { useEffect } from 'react'
 import BlogItem from './BlogItem'
 import Image from 'next/image'
 import { useState } from 'react'
+import axios from 'axios'
 
 const BlogList = () => {
 
   const [menu, setMenu] = useState("All");
+  const [blogs, setBlogs] = useState([])
+
+  const fetchBlogs = async () => {
+    const response = await axios.get(/api/blog);
+    setBlogs(response.data.blogs);
+  }
+
+
+  useEffect(() => {
+    fetchBlogs()
+  }, [])
 
 
 
